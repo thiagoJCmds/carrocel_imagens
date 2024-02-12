@@ -4,30 +4,128 @@
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
+h1{
+    @media (max-width:480px){
+    font-size: 30px;
 
+    }
+}
+
+html{
+    overflow-x: hidden;
+}
+
+
+#image{
+    height: 200px;
+    width: 300px;
+}
 .container{
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
+    @media (max-width:480px){
+        margin: 0 10px;
+    }
+    @media (max-width:950px) and (orientation:landscape){
+        padding: 20px;
+    }
+  
+}
+.container2{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    display:flex ;
+    flex-wrap: wrap;
+    justify-content: space-between;    
+    @media (max-width:950px) and (orientation:landscape){
+        max-width: 100%;
+        width: 100%;
+        justify-content: space-around;
+      
+    }
+    @media (max-width:480px){
+        justify-content: center;
+        
+    }
+
+}
+
+.box{
+    display: flex;
+    padding-top: 16px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;    
+    @media (max-width:950) and (orientation:landscape){
+        height: 100px;
+        width: 90px;
+        display: none;
+    }
 }
 
 
-header{
+header, footer{
     background-color: #192a56;
     color: #fff;
 }
 
-header > .container {
+header{
+    /* para a elemento acompanhar a rolagem do site */
+    position: sticky;
+    top: 0;
+    left: 0;
+    /* essa regra é para sobre por o carrocel que tem a position relative */
+    z-index: 1;
+}
+
+
+footer > .container {
     padding-top: 16px;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px 0;
 }
 
+.container3{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;    
+    padding-top: 16px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    @media (max-width:480px){
+        max-width:100%;
+        width: 100%;
+        padding: 20px;
+    }
+    @media (max-width:950px) and (orientation:landscape){
+        max-width:100%;
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+#imsb{
+    @media (max-width:480px){
+        display: none;
+    }
+    
+    @media (max-width:950px) and (orientation:landscape){
+        height: 100px;
+        width: 200px;
+        
+    }
+}
+
 nav{
     background-color: #575fcf;
     padding: 16px;
+    display: none;
 }
 
 nav li {
@@ -46,6 +144,7 @@ nav li a {
 
 .menu-hamburguer{
     width: 32px;
+    cursor: pointer;
 }
 
 .menu-hamburguer span {
@@ -54,4 +153,123 @@ nav li a {
     background-color: #fff;
     display: block;
     margin-bottom: 4px;
+}
+
+.container-flex {
+    display: flex;
+}
+
+#sobre-a-loja img {
+    max-width: 400px;
+    margin-right: 24px;
+}
+
+section {
+    padding: 48px 0;
+}
+
+section h2 {
+    margin-bottom: 16px;
+}
+
+.lista-veiculos {
+    flex-wrap: wrap;
+}
+
+.lista-veiculos li{
+    max-width: 30%;
+    width: 100%;
+    list-style: none;
+    margin-bottom: 24px;
+}
+
+.lista-veiculos li img{
+    max-width: 100%;
+}
+
+.lista-veiculos li h3 {
+    margin: 16px 0;
+}
+
+
+button{
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: #119759;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.price {
+    margin: 16px 0;
+    display: block;
+}
+
+.price del{
+    color: #ccc;
+    font-size: 14px;
+}
+
+.form-campo{
+    margin-bottom: 16px;
+}
+
+.form-campo label {
+    font-weight: bold;
+    display: block;
+}
+
+.form-campo input,
+.form-campo textarea {
+    width: 100%;
+    display: block;
+    padding: 8px;
+}
+
+.form-campo textarea {
+    /* resize none para bloquear o textarea */
+    resize: none;
+    height: 120px;
+}
+
+form {
+    max-width: 360px;
+}
+
+form button{
+    max-width: 120px;
+}
+
+footer li{
+    list-style: none;
+    margin-left: 16px;
+}
+
+#foot{
+    height: 32px;
+    @media (max-width:480px){
+        height: 20px;
+    }
+}
+
+.container4{
+    height: 50px;
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+        @media (max-width:480px){
+        padding: 0 20px;
+        }
+        @media (max-width:950px) and (orientation:landscape){
+        padding: 0 20px;
+        }
 }
